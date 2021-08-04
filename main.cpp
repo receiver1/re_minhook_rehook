@@ -41,6 +41,8 @@ int main()
     // Вывожу адрес чтобы чекать в CE
     printf("shit: %p\n", MessageBoxA);
 
+    c_minhook_rehook msgbox_rehook;
+    
     // Устанавливаю rehook на hook
     msgbox_rehook.install((uintptr_t)MessageBoxA, (uintptr_t)rehooked_msgbox);
   
