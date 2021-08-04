@@ -17,7 +17,7 @@ int __cdecl hooked_msgbox(HWND hwnd, LPCSTR text, LPCSTR caption, UINT type)
     //return orig_msgbox(hwnd, text, caption, type);
 }
 
-// Наш rehook
+// Наш hook
 int __cdecl rehooked_msgbox(HWND hwnd, LPCSTR text, LPCSTR caption, UINT type)
 {
     printf("rehooked_msgbox: %s\n", text);
